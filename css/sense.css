@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&display=swap');
+:root{
+    --cbackground: rgba(0, 0, 0, 0.2);
+    --border:rgba(23, 250, 255, 0.2);
+    --lightGray:#FFFFFF80;
+    --abtBackground:#02070a;
+    --heading:#12c8c8;
+    --nwkBg:#111919;
+}
+*{
+   
+    padding: 0;
+    margin:0;
+    font-family: "IBM Plex Sans", sans-serif;
+    font-style: normal;
+    box-sizing: border-box;
+    line-height:1.8em;
+    font-weight:400;
+
+
+}
+
+.home-bg{
+    background-image: url(../assets/sense-bg.png),linear-gradient(to bottom, rgba(8, 8, 8, 0.582) 0%, rgba(26, 24, 21, 0.73) 59%);
+    background-size:cover;
+    background-position: center;
+    background-blend-mode: overlay;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-decoration: none;
+    color:inherit;
+}
+
+.home-bg .navbar{
+    width:620px;
+    height:min-content;
+    position:fixed;
+    border-radius:25px;
+    top:1.5rem;
+    background-color: var(--cbackground);
+    z-index:1000;
+    border:1px solid var(--border);
+    display: flex;
+    align-items:center;
+    justify-content:space-between;
+    box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
+}
+
+.home-bg .navbar .logo{
+    width:40%;
+    display:flex;
+    align-items: center;
+    justify-content: flex-start;
+ }
+
+.home-bg .navbar img{
+    height:2rem;
+    margin-left:0.5rem;
+}
+
+.home-bg .navbar .nav-op{
+    width:60%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color:white;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.home-bg .aboutMain{
+    color:white;
+    width: 1018px;
+    position:sticky;
+    top:20%;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap:24px;
+}
+
+.home-bg .aboutMain .abq1,
+.home-bg .aboutMain .abq2,
+.home-bg .aboutMain .abbutton{
+    width:100%;
+    height: min-content;
+}
+.home-bg .aboutMain .abq1 img{
+    width:382px;
+}
+
+.home-bg .aboutMain .abq2{
+
+    white-space: wrap;
+
+}
+.home-bg .aboutMain .abq2 h1{
+    font-family: "IBM Plex Mono", monospace;
+    letter-spacing: 1.5px;
+    font-weight:500;
+    font-size: 2.3rem;
+    line-height: 1.5em;
+}
+.home-bg .aboutMain .abq2 span{
+    white-space: nowrap;
+}
+.home-bg .navbar .nav-op #req-demo,
+.home-bg .aboutMain .abbutton #req-demo2{
+    background: #FFFFFF80;
+    border: 1px solid var(--border);
+    border-radius:25px;
+    padding:0.5rem 2rem;
+    margin:0.2rem;
+    transform-origin: right;
+    transition-duration: 0.5s;
+    white-space: nowrap;
+}
+
+
+ .home-bg .navbar .nav-op #req-demo:hover{
+     transform: scaleX(1.1);
+     transition-duration: 0.5s;
+ }
+
+ .home-bg .navbar .nav-op #req-demo:hover,
+ .home-bg .aboutMain .abbutton #req-demo2:hover{
+     transition-timing-function: ease-in-out;
+     transition-duration: 0.5s;
+     color:black;
+     background: linear-gradient(108deg, rgb(12, 255, 210) 0%, rgb(23, 250, 255) 48.1982%, rgb(0, 191, 255) 100%) rgba(0, 0, 0, 0);
+     box-shadow: rgba(8, 248, 254, 0.1) 0px 4px 9px 0px, rgba(8, 248, 254, 0.09) 0px 16px 16px 0px, rgba(8, 248, 254, 0.05) 0px 35px 21px 0px, rgba(8, 248, 254, 0.01) 0px 62px 25px 0px, rgba(8, 248, 254, 0) 0px 98px 27px 0px;
+ }
+ .home-bg .aboutMain .abbutton #req-demo2:hover{
+     transform: scale2d(1.2);
+     transition-duration: 0.5s;
+     background-image: linear-gradient(90deg, rgb(131, 218, 111) 0%, rgb(23, 250, 255) 48.6486%, rgb(83, 171, 248) 100%);
+
+ }
+ 
+ .home-bg .navbar .nav-op #req-demo:hover::after,
+ .home-bg .aboutMain .abbutton #req-demo2:hover::after {
+     content:" \2197";
+ }
+
+ section{
+    background-color: rgb(25, 24, 21);
+    display: flex;
+    flex-direction: column;
+    gap:24px;
+    align-items: flex-start;
+    justify-content: center;
+    padding:40px 160px;
+    color:white;
+    height:min-content;
+
+}
+
+
+.intro h4{
+    font-size:20px;
+    font-family: "IBM Plex Mono", monospace;
+    font-weight: 500;
+}
+.clip{
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size:28px;
+    font-family: "IBM Plex Mono", monospace;
+    background-image:linear-gradient(90deg, rgb(247, 207, 88) 0%, rgb(240, 147, 67) 48.6486%, rgb(235, 88, 81) 100%);
+}
+
+.content p{
+    font-size:18px;
+    font-weight: 400;
+}
+.benefits{
+    height:1000px;
+}
+.benefits .benefitGrid{
+    display:grid;
+    height:92%;
+    padding-top:40px;
+    gap:54px;
+    grid-template-columns: repeat(2,minmax(200px,1fr));
+    grid-template-rows: repeat(2,minmax(0px,1fr));
+    grid-auto-rows:minmax(0,1fr);
+    width:100%;
+    grid-area: 2/1/2/3;
+}
+
+.benefits .benefitGrid .benefitsContainer{
+    border:1px solid rgba(240, 147, 67, 0.2);
+    border-radius: 16px;
+    display:flex;
+    flex-direction:column;
+    box-shadow: rgba(54, 32, 13, 0.03) 0px 41px 90px 0px, rgba(54, 32, 13, 0.03) 0px 164px 164px 0px, rgba(54, 32, 13, 0.02) 0px 368px 221px 0px, rgba(54, 32, 13, 0) 0px 655px 262px 0px, rgba(54, 32, 13, 0) 0px 1023px 287px 0px;
+    height:100%;
+    min-width: 250px;
+    padding:40px;
+    position:relative;
+    width:100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+}
+
+.benefits .benefitGrid .benefitsContainer .circle{
+    height:58px;
+    width:58px;
+    border-radius: 50%;
+    position:absolute;
+    top:0;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-image:  linear-gradient(135deg, rgb(247, 207, 88) 11%, rgb(240, 147, 67) 51.3514%, rgb(235, 88, 81) 100%);
+}
+
+
+
+.contact {
+    display: flex;
+    flex-direction:row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 80px;
+
+}
+.contact .branch{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    list-style-position: inside;
+    padding:4px;
+    gap:38px;
+    width:50%;
+}
+
+.contact .branch ul{
+    list-style-type: none;
+}
+.contact .branch ul li,
+.contact .branch .contact-mobile p{
+    display: flex;
+    align-items: center;
+    gap:10px;
+    padding-top:12px
+}
+
+.contact .branch .locations h2,
+.contact .branch .contact-mobile h4{
+    font-family: "IBM Plex Mono", monospace;
+    font-weight:400;
+    color:#efd05d;
+    font-size: 28px;
+}
+.contact .branch .contact-mobile h4{
+    font-size:20px;
+}
+
+.contact .contactform{
+    width: 50%;
+    max-width:650px;
+}
+.contact .contactform .query-form{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    align-items: flex-start;
+    
+}
+.contact .contactform .query-form input,
+.contact .contactform .query-form textarea,
+.contact .contactform .query-form button{
+    padding:12px 19px;
+    border:1px solid white;
+    background-color: rgba(0, 0, 0, 0.5);;
+    border-radius: 4px;
+    font-weight: 100;
+    font-size: 14px;
+    width:100%;
+}
+.contact .contactform .query-form button{
+    background:linear-gradient(to right, rgb(247, 207, 88), rgb(240, 147, 67), rgb(235, 88, 81));
+    color:black;
+    font-weight: 500;
+
+}
+.footer-frame{
+    background-color:#141414;
+    padding:60px 40px 30px 60px;
+    display: flex;
+    flex-direction:column;
+    gap:24px;
+    height: min-content;
+}
+.footer-frame .innerFooterFrame-1{
+    display:flex;
+    flex-direction: row;
+    width:100%;
+    height: 100%;
+}
+.footer-frame .innerFooterFrame-1 .iris,
+.footer-frame .innerFooterFrame-1 .about-footer,
+.footer-frame .innerFooterFrame-1 .footerlogo{
+    display: flex;
+    flex-direction: column;
+    gap:15px;
+    font-size: 14px;
+    color: white;
+}
+.footer-frame .innerFooterFrame-1 .iris{
+    width:300px;
+
+}
+.footer-frame .innerFooterFrame-1 .about-footer{
+    width:100%;
+}
+.footer-frame .innerFooterFrame-1 .footerlogo{
+    width: 223px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.footer-frame .innerFooterFrame-1 .iris ul,
+.footer-frame .innerFooterFrame-1 .about-footer ul{
+    color:var(--lightGray);
+    line-height: 2rem;
+    list-style-type: none;    
+}
+
+.footer-frame .innerFooterFrame-1 .iris ul li a:hover,
+.footer-frame .innerFooterFrame-1 .about-footer ul li a:hover{
+    color:white;
+}
+
+.footer-frame .innerFooterFrame-1 .footerlogo img{
+    width:122px;
+}
+.footer-frame .innerFooterFrame-2 {
+    display:flex;
+    flex-direction:column;
+    gap:16px;
+    align-items: center;
+    justify-content: center;
+    color:white;
+    font-size: 16px;
+}
+.footer-frame .innerFooterFrame-3{
+    display: flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+}
+.footer-frame .innerFooterFrame-3 .copyrightFooter{
+    width:80%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    border-top: 1px solid var(--lightGray);
+    color:var(--lightGray);
+    padding:8px 0 0;
+}
