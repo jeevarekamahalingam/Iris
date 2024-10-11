@@ -54,8 +54,12 @@ a{
     justify-content: flex-start;
  }
 
+ .home-bg .navbar .logo a{
+    display: flex;
+    place-items: center;
+}
 .home-bg .navbar img{
-    height:2rem;
+    height:2.02rem;
     margin-left:0.5rem;
 }
 
@@ -69,6 +73,63 @@ a{
     font-weight: bold;
 }
 
+.home-bg .navbar .nav-op .mainOp:hover,
+.home-bg .navbar .nav-op .productMenu:hover #prod{
+    color:#05f9fe;
+}
+
+.home-bg .navbar .nav-op .productMenu{
+    padding:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+}
+
+.home-bg .navbar .nav-op .productMenu .outterdiv{
+    position:absolute;
+    padding:1rem;
+    top:100%;
+}
+.home-bg .navbar .nav-op .productMenu .optionsProducts{
+    background-color:var(--cbackground);
+    border:1px solid var(--border);
+    box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
+    width: 7.2rem;
+    border-radius: 5px;
+    text-align: center;
+    
+}
+
+.home-bg .navbar .nav-op .productMenu .optionsProducts ul{
+    list-style-type:none;
+    margin:0.2rem;
+}
+
+.home-bg .navbar .nav-op .productMenu .optionsProducts ul li{
+    padding:8.5px 0;
+    border-radius: 2px;
+} 
+.home-bg .navbar .nav-op .productMenu .optionsProducts ul li:hover{
+    background-color: rgba(66,66,66,255);
+    color:#05f9fe;
+}
+
+
+.home-bg .navbar .nav-op .productMenu .outterdiv{
+    display: none;
+}
+
+.home-bg .navbar .nav-op .productMenu:hover .outterdiv{
+    display: block;
+}
+
+.home-bg .navbar .nav-op .productMenu:hover #arrow{
+    transform: rotate(180deg);
+}
+.home-bg .navbar .nav-op .productMenu:hover #arrow path{
+    fill:#05f9fe;
+}
 .home-bg .aboutMain{
     color:white;
     width: 1018px;
@@ -111,7 +172,7 @@ a{
     background: #FFFFFF80;
     border: 1px solid var(--border);
     border-radius:25px;
-    padding:0.5rem 2rem;
+    padding:0.6rem 2rem;
     margin:0.2rem;
     transform-origin: right;
     transition-duration: 0.5s;
