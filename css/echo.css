@@ -286,7 +286,7 @@ a{
 }
 
 .benefits{
-    height:1000px;
+    height:min-content;
 }
 .benefits .benefitGrid{
     display:grid;
@@ -316,6 +316,10 @@ a{
 
 }
 
+#thirdDiv{
+    grid-column:1/3;
+    height: min-content;
+}
 .contact {
     display: flex;
     flex-direction:row;

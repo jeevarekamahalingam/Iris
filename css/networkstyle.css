@@ -53,7 +53,7 @@ a{
 .home-bg .navbar .logo{
     width:40%;
  }
-.home-bg .navbar .logo a{
+.home-bg .navbar  a{
     display: flex;
     place-items: center;
 }
@@ -100,14 +100,15 @@ a{
 
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul{
     list-style-type:none;
-    margin:0.2rem;
-   
+    margin:0.2rem;   
 
 }
 
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul li{
     padding:8.5px 0;
     border-radius: 2px;
+    width: 100%;
+    text-align: center;
 
 } 
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul li:hover{

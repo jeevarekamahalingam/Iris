@@ -14,6 +14,11 @@
     box-sizing: border-box;
 
 }
+p,h1,h2,h3,h4{
+    word-break: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
 body{
 
     background-color: #05141b;
@@ -167,12 +172,26 @@ a{
 .home-bg .content #req-demo2:hover::after {
     content:" \2197";
 }
+.home-bg .navbar .checkdiv{
+    height: 40px;
+    width: 40px;
+    position:relative;
+    display:none;
+    padding:0.4rem;
+    margin-right: 0.8rem;
+}
+.home-bg .navbar .checkdiv input[type="checkbox"],
+.home-bg .navbar .checkdiv .hamburgerCross{
+    display: none;
+}
 .home-bg .content{
     color:white;
     width: 1018px;
     height: 161px;
     position:sticky;
     top:20%;
+    word-break: break-word;
+    word-wrap: break-word;
     white-space: wrap;
     letter-spacing: 0.1rem;
     font-weight: 500;
@@ -480,7 +499,25 @@ section{
 }
     
 
-@media screen and (max-width:802px){
+@media screen and (max-width:809px){
+    .home-bg .navbar{
+        width:90%;
+        justify-content: space-between;
+    }
+    .home-bg .navbar .nav-op{
+        display:none;
+        width:100%;
+    }
+    .home-bg .navbar .checkdiv input[type="checkbox"]:checked .checkdiv #hamburgerLine{
+        display: none;
+    }
+    .home-bg .navbar .checkdiv,
+    .home-bg .navbar .checkdiv input[type="checkbox"]:checked #hamburgerCross{
+        display:inline;
+    }
+    .home-bg .navbar .checkdiv input[type="checkbox"]:checked .checkdiv #hamburgerLine{
+        display: none;
+    }
     section{
         height:min-content;
     }
