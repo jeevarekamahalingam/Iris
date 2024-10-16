@@ -16,7 +16,11 @@
     box-sizing: border-box;
 
 }
-
+p,h1,h2,h3,h4,a{
+    word-break: break-word;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
 .home-bg{
     background-color:var(--abtBackground);
     background-size:cover;
@@ -132,7 +136,7 @@ a{
 }
 .home-bg .aboutMain{
     color:white;
-    width: 1018px;
+    width: 80%;
     position:sticky;
     top:20%;
     display:flex;
@@ -235,6 +239,7 @@ a{
     border:1px solid var(--border);
     border-radius: 16px;
     padding: 40px;
+    overflow: hidden;
     box-shadow: rgba(8, 248, 254, 0.03) 0px 41px 90px 0px, rgba(8, 248, 254, 0.03) 0px 164px 164px 0px, rgba(8, 248, 254, 0.02) 0px 368px 221px 0px, rgba(8, 248, 254, 0) 0px 655px 262px 0px, rgba(8, 248, 254, 0) 0px 1023px 287px 0px;
 }
 
@@ -430,4 +435,173 @@ a{
     border-top: 1px solid var(--lightGray);
     color:var(--lightGray);
     padding:8px 0 0;
+}
+
+
+@media screen and (max-width:809px){
+    
+    .home-bg .navbar{
+        width:90%;
+        flex-direction: column;
+        justify-content: space-between;
+        
+    }
+   
+    .home-bg .aboutMain h1,
+    .home-bg .aboutMain h2{
+        font-size: 1.5rem;
+    }
+    .home-bg .aboutMain .abq2 .nowrap{
+        white-space: wrap;
+    }
+
+    section{
+        height:min-content;
+    }
+   /* .aboutus .person .imagedetails{
+        width:30%;
+        overflow: hidden;
+    }
+   .aboutus .person .imagedetails .image{
+        width: 100%;
+    }  */
+    .contact .contactFrame{
+        flex-direction:column-reverse;
+        width: 100%;
+        
+    }
+    .contact .contactFrame .contactform,
+    .contact .contactFrame .branch{
+        width:100%;
+        overflow: hidden;
+    }
+    .contact .contactFrame .contactform{
+        padding:1rem;
+        place-self: center;
+    } 
+    .footer-frame .innerFooterFrame-1,
+    .footer-frame .innerFooterFrame-1 .about-footer,
+    .footer-frame .innerFooterFrame-1 .iris{
+        flex-direction:column;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width:809px){
+
+    html{
+       scroll-behavior: smooth;
+    }
+    .home-bg .navbar{
+       display: flex;
+       padding:1rem;
+       flex-direction:column;
+       align-items: flex-start;
+       gap:1rem;
+       justify-content: flex-start;
+   }
+   .home-bg .navbar .nav-op{
+       display:none;
+       transition:all 2s ease-in;
+
+   } 
+   .hamburger{
+       display:flex;
+       flex-direction:column;
+       justify-content:center;
+       align-items:center;
+       position:absolute;
+       top:1.5rem;
+       right:1rem;
+       width:30px;
+       height:21px;
+
+   }
+   .one,.three{
+       height:1px;
+       width:10px;
+       background-color: white;
+       
+
+   }
+   .two{
+       height:1px;
+       width:20px;
+       background-color: white;
+   }
+   .bar{
+       transform: rotate(-45deg);
+   }
+   .one{
+     margin-right:10px;
+
+   }
+   .two{
+       margin:2px 0;
+   }
+   .three{
+       margin-left:7px;
+   }
+   .hamburger.active{
+       top:20px;
+   }
+   .hamburger.active .one{
+       width:25px;
+       transform:rotate(45deg);
+       margin:0;
+
+   }
+   .hamburger.active .three{
+       width:25px;
+       transform:rotate(-45deg);
+       margin:0;
+
+   }
+   .hamburger.active .two{
+       display:none;
+   }
+   .navbar.active #navoptions{
+       display: flex;
+       flex-direction: column;
+       gap:10px;
+   }
+   .navbar.active .mainOp,
+   .navbar.active .productMenu{
+       place-self: flex-start ;
+       flex-direction: column;     
+   }
+  
+   .nav-op.active  .nav-op .productMenu{
+       place-self:flex-start !important;
+       flex-direction: column !important;
+   }
+   .nav-op.active .outterdiv {
+       position:static !important;
+   }
+   .nav-op.active .optionsProducts{
+       width:100% !important;
+       border:none !important;
+       box-shadow: none !important;
+       background-color:transparent !important;
+       text-align: left !important;
+
+       
+   }
+   
+   
+
+}
+@media (min-width:810px){
+   .home-bg .navbar .hamburger{
+       display:none;
+      
+   }  
+}
+@media (max-width:1199px){
+    section,
+    .aboutus,.contact{
+        padding:40px 24px;
+    }
+    
 }

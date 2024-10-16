@@ -179,33 +179,34 @@ a{
     display:none;
     padding:0.4rem;
     margin-right: 0.8rem;
-}
-.home-bg .navbar .checkdiv input[type="checkbox"],
-.home-bg .navbar .checkdiv .hamburgerCross{
-    display: none;
-}
+} 
+
 .home-bg .content{
     color:white;
-    width: 1018px;
-    height: 161px;
+    width: 80%;
+    height: min-content;
     position:sticky;
+    display: flex;
+    flex-direction: column;
+    gap:24px;
     top:20%;
     word-break: break-word;
     word-wrap: break-word;
     white-space: wrap;
-    letter-spacing: 0.1rem;
-    font-weight: 500;
     text-align: center;
-
   
 }
-.home-bg h1{
+.home-bg  .content .quotecontainer  h1{
     font-family: "IBM Plex Mono", monospace;
     font-size: 2.3rem;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+
 
 }
-.home-bg .content .nowrap{
+.home-bg .nowrap{
     white-space: nowrap;
+ 
 }
 section{
     display: block;
@@ -237,7 +238,6 @@ section{
     align-items:flex-start;
     justify-content:center;
     gap:50px;
-
 }
 .features .feature-home{
     border:.5px solid var(--border) ;
@@ -267,25 +267,87 @@ section{
     height:100vh;
     display:flex;
     flex-direction:column;
-    align-items:center;
-    justify-content: center;
+    /* align-items:center;
+    justify-content: center; */
     gap:85px;
     padding:100px 0;
     color:white;
     font-size:28px;
     text-align:center;
+    
+
 
 }
-.anime .frame h1{
+@keyframes scrollEffect {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(-100px); } /* Moves left */
+    100% { transform: translateX(0); } /* Moves back to right */
+  }
+.anime{
+    padding: 0px;
+    
+}
+.anime .frame .animeQuote h1 {
     font-family: "IBM Plex Mono", monospace;
     font-weight: 400;
+    padding:0 100px;
+    font-size: 28px;
 
 }
-.anime .frame span{
+.anime .frame .animeQuote span{
 
     color:var(--border);
 }
+.anime .frame .animeroad{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    justify-content: flex-end;
+}
+.anime .frame .animeroad .animebg{
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap:20px;
+    width: 100%;
+    overflow:hidden;
+    position:sticky;
+    z-index:-1;
+    transition: transform 0.3s ease-out;
+  transform: translateX(0);
+  animation: scrollEffect 10s infinite alternate;
 
+}
+.anime .frame .animeroad .animebg .cIcon{
+    display:flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    width: 100%;
+    /* background-color: #05f9fe; */
+   
+   
+}
+.anime .frame .animeroad .animebus{
+    position:absolute;   
+   width:100%;
+    border-bottom: 4px solid white;
+}
+.anime .frame .animeroad .animebus .vehicle{
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    width:100%;
+    overflow:hidden;
+
+}
+.anime .frome:hover #animebg{
+    transform:translateX(-100%);
+    transition: transform 1s ease-in-out ;
+}
+.anime .frame .animeroad .animebus .vehicle div{
+    display: flex;
+    align-items: flex-end;
+}
 .suite{
     display: grid;
     grid-template-columns: repeat(3,1fr);
@@ -296,6 +358,7 @@ section{
 }
 .suite .suite-home{
     border-radius:16px ;
+    height:min-content;
     min-height: 250px;
     display:flex;
     flex-direction: column;
@@ -337,6 +400,18 @@ section{
     /* background-color: #12c8c8; */
     text-align: center;
 
+}
+.suite .suite-home .knowmore{
+    display: none;
+}
+.suite .suite-home:hover{
+    transform:scale(1.02);
+    transition-duration: 0.5s;
+    transition-timing-function: ease-in-out;
+}
+.suite .suite-home:hover .knowmore{
+    margin: 24px 0;
+    display: inline-block;
 }
 
 .contact {
@@ -415,6 +490,7 @@ section{
     flex-direction:column;
     gap:24px;
     height: min-content;
+    overflow: hidden;
 }
 .footer-frame .innerFooterFrame-1{
     display:flex;
@@ -483,41 +559,24 @@ section{
     color:var(--lightGray);
     padding:8px 0 0;
 }
-@media (min-width:0px){
-    .suite .suite-home .knowmore{
-        display: none;
-    }
-    .suite .suite-home:hover{
-        transform:scale(1.05);
-        transition-duration: 0.5s;
-        transition-timing-function: ease-in-out;
-    }
-    .suite .suite-home:hover .knowmore{
-        margin: 24px 0;
-        display: inline-block;
-    }
-}
     
 
+
 @media screen and (max-width:809px){
+
     .home-bg .navbar{
         width:90%;
+        flex-direction: column;
         justify-content: space-between;
+        
     }
-    .home-bg .navbar .nav-op{
-        display:none;
-        width:100%;
+    .home-bg .content .quotecontainer h1{
+        font-size:4vw;
     }
-    .home-bg .navbar .checkdiv input[type="checkbox"]:checked .checkdiv #hamburgerLine{
-        display: none;
+    .home-bg .content .quotecontainer .nowrap{
+        white-space: wrap;
     }
-    .home-bg .navbar .checkdiv,
-    .home-bg .navbar .checkdiv input[type="checkbox"]:checked #hamburgerCross{
-        display:inline;
-    }
-    .home-bg .navbar .checkdiv input[type="checkbox"]:checked .checkdiv #hamburgerLine{
-        display: none;
-    }
+
     section{
         height:min-content;
     }
@@ -527,5 +586,163 @@ section{
     .features .feature-home{
         height:min-content;
     
+    }
+    .suite{
+        grid-template-columns: repeat(2,1fr);
+    }
+    #thirdDiv{
+        grid-column:1/3;
+    }
+    .contact{
+        flex-direction:column-reverse;
+        padding:40px 24px;
+    }
+    .contact .contactform,
+    .contact .branch{
+        width:100%;
+    }
+    .footer-frame{
+        padding:60px 40px 30px;
+    }
+    .footer-frame .innerFooterFrame-1,
+    .footer-frame .innerFooterFrame-1 .about-footer,
+    .footer-frame .innerFooterFrame-1 .iris{
+        flex-direction:column;
+        align-items: center;
+    }
+    
+}
+
+@media (max-width:809px){
+
+    html{
+       scroll-behavior: smooth;
+    }
+    .home-bg .navbar{
+       display: flex;
+       padding:1rem;
+       flex-direction:column;
+       align-items: flex-start;
+       gap:1rem;
+       justify-content: flex-start;
+   }
+   .home-bg .navbar .nav-op{
+       display:none;
+       transition:all 2s ease-in;
+
+   } 
+   .hamburger{
+       display:flex;
+       flex-direction:column;
+       justify-content:center;
+       align-items:center;
+       position:absolute;
+       top:1.5rem;
+       right:1rem;
+       width:30px;
+       height:21px;
+
+    }
+   .one,.three{
+       height:1px;
+       width:10px;
+       background-color: white;
+       
+
+   }
+   .two{
+       height:1px;
+       width:20px;
+       background-color: white;
+   }
+   .bar{
+       transform: rotate(-45deg);
+   }
+   .one{
+     margin-right:10px;
+
+   }
+   .two{
+       margin:2px 0;
+   }
+   .three{
+       margin-left:7px;
+   }
+   .hamburger.active{
+       top:20px;
+   }
+   .hamburger.active .one{
+       width:25px;
+       transform:rotate(45deg);
+       margin:0;
+
+   }
+   .hamburger.active .three{
+       width:25px;
+       transform:rotate(-45deg);
+       margin:0;
+
+   }
+   .hamburger.active .two{
+       display:none;
+   }
+   .navbar.active #navoptions{
+       display: flex;
+       flex-direction: column;
+       gap:10px;
+   }
+   .navbar.active .mainOp,
+   .navbar.active .productMenu{
+       place-self: flex-start ;
+       flex-direction: column;     
+   }
+  
+   .nav-op.active  .nav-op .productMenu{
+       place-self:flex-start !important;
+       flex-direction: column !important;
+   }
+   .nav-op.active .outterdiv {
+       position:static !important;
+   }
+   .nav-op.active .optionsProducts{
+       width:100% !important;
+       border:none !important;
+       box-shadow: none !important;
+       background-color:transparent !important;
+       text-align: left !important;
+
+       
+   }
+   
+   
+
+}
+@media (min-width:810px){
+   .home-bg .navbar .hamburger{
+       display:none;
+      
+   }  
+}
+
+@media screen and (max-width:1199px){
+    section{
+        padding:40px 24px;
+    }
+    .anime .frame .animeQuote h1 {
+
+        font-size: 22px;
+    
+    }
+}
+@media screen and (max-width:602px){
+    .suite{
+        grid-template-columns: 1fr;
+        height: min-content;
+    }
+    #thirdDiv{
+        grid-column: 1;
+    }
+    .anime{
+        height: min-content;
     }
 }

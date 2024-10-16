@@ -13,12 +13,19 @@
             <div class="navbar">
                 <div class="logo">
                     <a href="index.html"><img src="assets/logo.svg" alt=""></a>
-                </div>
-                <div class="nav-op">                    
+                </div> 
+                <a class="hamburger">
+                    <span class="bar one"></span>
+                    <span class="bar two"></span>
+                    <span class="bar three"></span>
+                </a>
+                <div  class="nav-op" id="navoptions">                    
                     <a class="mainOp"href="index.html">Home</a>
                     <span class="productMenu">
-                        <a id="prod">Products</a>
-                        <svg id="arrow"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="padding:0;" height="0.7rem" width="0.7rem" viewBox="0 0 12 12"><path d="M 2.178 3.671 C 2.292 3.566 2.446 3.507 2.607 3.507 C 2.768 3.507 2.922 3.566 3.036 3.671 L 6.246 6.644 L 9.457 3.671 C 9.514 3.617 9.581 3.574 9.654 3.545 C 9.804 3.486 9.972 3.485 10.123 3.542 C 10.198 3.57 10.266 3.612 10.323 3.664 C 10.38 3.717 10.425 3.779 10.455 3.849 C 10.516 3.988 10.515 4.146 10.451 4.283 C 10.418 4.353 10.372 4.415 10.315 4.465 L 6.675 7.835 C 6.562 7.94 6.407 8 6.246 8 C 6.088 8.001 5.935 7.942 5.818 7.835 L 2.178 4.465 C 2.065 4.364 2.001 4.22 2 4.068 C 2 3.919 2.064 3.777 2.178 3.671 Z" fill="rgb(165, 165, 165)"></path></svg>
+                        <span class="nowrap">
+                            <a id="prod" class="prod">Products</a>
+                            <svg id="arrow" class="prod"xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="padding:0;" height="0.7rem" width="0.7rem" viewBox="0 0 12 12"><path d="M 2.178 3.671 C 2.292 3.566 2.446 3.507 2.607 3.507 C 2.768 3.507 2.922 3.566 3.036 3.671 L 6.246 6.644 L 9.457 3.671 C 9.514 3.617 9.581 3.574 9.654 3.545 C 9.804 3.486 9.972 3.485 10.123 3.542 C 10.198 3.57 10.266 3.612 10.323 3.664 C 10.38 3.717 10.425 3.779 10.455 3.849 C 10.516 3.988 10.515 4.146 10.451 4.283 C 10.418 4.353 10.372 4.415 10.315 4.465 L 6.675 7.835 C 6.562 7.94 6.407 8 6.246 8 C 6.088 8.001 5.935 7.942 5.818 7.835 L 2.178 4.465 C 2.065 4.364 2.001 4.22 2 4.068 C 2 3.919 2.064 3.777 2.178 3.671 Z" fill="rgb(165, 165, 165)"></path></svg>
+                        </span> 
                         <div class="outterdiv">
                             <div class="optionsProducts">
                                 <ul>
@@ -31,14 +38,14 @@
                     </span>
                     <a class="mainOp" href="about.html">About</a>
                     <a class="mainOp" id="req-demo" href="#contactform">Request demo</a>
-                </div>
-            </div>
+                </div>               
+             </div>
             <div class="aboutMain">
                 <div class="abq1">
                     <h2>We are not just software geeks wanting to do something in EV Space!</h2>
                 </div>
                 <div class="abq2">
-                    <h1>We are business problem solvers, energy and <span>EV charging specialists</span></h1>
+                    <h1>We are business problem solvers, energy and <span class="nowrap">EV charging specialists</span></h1>
                 </div>
                 <div class="abbutton">
                     <a id="req-demo2" href="#contactform">Request demo</a>
@@ -173,5 +180,7 @@
         </div>
      </footer>
      <!--footer end-->
+     <script src="js/script.js"></script>
+
 </body>
 </html>
