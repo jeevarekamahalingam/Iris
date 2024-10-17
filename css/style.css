@@ -145,6 +145,7 @@ a{
     transform-origin: right;
     transition-duration: 0.5s;
     white-space: nowrap;
+    overflow: hidden;
 }
 
 .home-bg .content #req-demo2{
@@ -180,7 +181,16 @@ a{
     padding:0.4rem;
     margin-right: 0.8rem;
 } 
-
+.home-bg .waves{
+    position:absolute;
+    top:550px;
+    right:0;
+    overflow: hidden;
+}
+.home-bg .waves img{
+    opacity: 0.3;
+    transform:translateX(300px);
+}
 .home-bg .content{
     color:white;
     width: 80%;
@@ -194,7 +204,6 @@ a{
     word-wrap: break-word;
     white-space: wrap;
     text-align: center;
-  
 }
 .home-bg  .content .quotecontainer  h1{
     font-family: "IBM Plex Mono", monospace;
@@ -208,19 +217,35 @@ a{
     white-space: nowrap;
  
 }
+.home-bg #google_translate_element{
+   box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
+    background-color: var(--cbackground);
+    border:1px solid var(--border);
+    border-radius: 25px;
+    padding:0.5rem;
+    width:min-content;
+    align-self: center;
+}
 section{
     display: block;
     align-items: center;
     justify-content: center;
     padding:60px 160px;
     color:white;
-   
 
 }
 .intro h4{
     font-size:20px;
     font-family: "IBM Plex Mono", monospace;
     font-weight: 500;
+
+}
+.effect{
+    animation: appear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+    animation-fill-mode: forwards ;
+    animation-duration: 2s;
 }
 .intro .heading{
     font-size: 28px;
@@ -231,6 +256,21 @@ section{
 }
 .intro p{
     font-size:18px;
+}
+
+.wavefly{
+    position:absolute;
+    top: 750px;
+    left:0;
+    width:700px;
+    height:550px;
+    overflow: hidden;
+    
+}
+.wavefly img{
+    transform: translateX(-200px) rotatez(-45deg);
+    
+    opacity: 0.3;
 }
 .features{
     display: grid;
@@ -278,11 +318,11 @@ section{
 
 
 }
-@keyframes scrollEffect {
+/* @keyframes scrollEffect {
     0% { transform: translateX(0); }
-    50% { transform: translateX(-100px); } /* Moves left */
-    100% { transform: translateX(0); } /* Moves back to right */
-  }
+    50% { transform: translateX(-100px); } 
+    100% { transform: translateX(0); } 
+  } */
 .anime{
     padding: 0px;
     
@@ -313,9 +353,9 @@ section{
     overflow:hidden;
     position:sticky;
     z-index:-1;
-    transition: transform 0.3s ease-out;
+    /* transition: transform 0.3s ease-out;
   transform: translateX(0);
-  animation: scrollEffect 10s infinite alternate;
+  animation: scrollEffect 10s infinite alternate; */
 
 }
 .anime .frame .animeroad .animebg .cIcon{
@@ -429,6 +469,7 @@ section{
     padding:4px;
     gap:38px;
     width:50%;
+    overflow: hidden;
 }
 
 .contact .branch ul{
@@ -481,6 +522,7 @@ section{
     background:linear-gradient(108deg, rgb(12, 255, 210) 0%, rgb(23, 250, 255) 48.1982%, rgb(0, 191, 255) 100%) rgba(0, 0, 0, 0);
     color:black;
     font-weight: 500;
+    cursor: pointer;
 
 }
 .footer-frame{
@@ -576,7 +618,9 @@ section{
     .home-bg .content .quotecontainer .nowrap{
         white-space: wrap;
     }
-
+    .waves,.wavefly{
+        display: none;
+    }
     section{
         height:min-content;
     }
@@ -744,5 +788,16 @@ section{
     }
     .anime{
         height: min-content;
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
     }
 }

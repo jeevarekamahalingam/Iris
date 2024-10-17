@@ -206,6 +206,37 @@ a{
      content:" \2197";
  }
 
+ .home-bg .waves{
+    position:absolute;
+    top:550px;
+    right:0;
+    overflow: hidden;
+}
+.home-bg .waves img{
+    opacity: 0.3;
+    transform:translateX(300px);
+}
+.wavefly{
+    position:absolute;
+    top: 750px;
+    left:0;
+    width:700px;
+    height:550px;
+    overflow: hidden;
+    
+}
+.wavefly img{
+    transform: translateX(-200px) rotatez(-45deg);
+    
+    opacity: 0.3;
+}
+.effect{
+    animation: appear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 60%;
+    animation-fill-mode: forwards ;
+    animation-duration: 2s;
+}
 .aboutus{
     display: flex;
     flex-direction: column;
@@ -359,6 +390,8 @@ a{
     background:linear-gradient(108deg, rgb(12, 255, 210) 0%, rgb(23, 250, 255) 48.1982%, rgb(0, 191, 255) 100%) rgba(0, 0, 0, 0);
     color:black;
     font-weight: 500;
+    cursor: pointer;
+
 
 }
 .footer-frame{
@@ -454,7 +487,9 @@ a{
     .home-bg .aboutMain .abq2 .nowrap{
         white-space: wrap;
     }
-
+    .waves,.wavefly{
+        display: none;
+    }
     section{
         height:min-content;
     }
@@ -604,4 +639,14 @@ a{
         padding:40px 24px;
     }
     
+}
+@keyframes appear {
+    from{
+        opacity:0;
+        scale:0.5;
+    }
+    to{
+        opacity:1;
+        scale:1;
+    }
 }

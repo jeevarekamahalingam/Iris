@@ -219,7 +219,16 @@ a{
  .home-bg .aboutMain .abbutton #req-demo2:hover::after {
      content:" \2197";
  }
-
+ .home-bg .waves{
+    position:absolute;
+    top:550px;
+    right:0;
+    overflow: hidden;
+}
+.home-bg .waves img{
+    opacity: 0.3;
+    transform:translateX(300px);
+}
  section{
     background-color: rgb(25, 24, 21);
     display: flex;
@@ -393,6 +402,8 @@ a{
     background:linear-gradient(to right, rgb(83, 171, 248), rgb(83, 62, 239), rgb(118, 69, 216));
     color:black;
     font-weight: 500;
+    cursor: pointer;
+
 
 }
 .footer-frame{
@@ -486,7 +497,9 @@ a{
     .home-bg .content .quotecontainer .nowrap{
         white-space: wrap;
     }
-
+    .waves{
+        display: none;
+    }
     section{
         height:min-content;
     }
