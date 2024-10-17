@@ -17,6 +17,7 @@
     box-sizing: border-box;
     line-height:1.8em;
     font-weight:400;
+    scroll-behavior: smooth;
 
 }
 p,h1,h2,h3,h4{
@@ -50,6 +51,7 @@ a{
     border:1px solid var(--border);
     display: flex;
     align-items:center;
+    backdrop-filter: blur(3px);
     justify-content:space-between;
     box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
 }
@@ -62,6 +64,7 @@ a{
 .home-bg .navbar  a{
     display: flex;
     place-items: center;
+    font-weight: bold;
 }
 .home-bg .navbar img{
     height:2rem;
@@ -75,7 +78,7 @@ a{
     justify-content: space-between;
     color:white;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
 }
 .home-bg .navbar .nav-op .mainOp:hover,
 .home-bg .navbar .nav-op .productMenu:hover #prod{
@@ -115,6 +118,7 @@ a{
     border-radius: 2px;
     width: 100%;
     text-align: center;
+    font-weight: bold;
 
 } 
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul li:hover{
@@ -141,8 +145,6 @@ a{
 .home-bg .aboutMain{
     color:white;
     width: 1018px;
-    position:sticky;
-    top:20%;
     display:flex;
     flex-direction:column;
     align-items: center;
@@ -170,7 +172,7 @@ a{
     font-family: "IBM Plex Mono", monospace;
     letter-spacing: 1.5px;
     font-weight:500;
-    font-size: 2.3rem;
+    font-size: 2rem;
     line-height: 1.5em;
 }
 .home-bg .aboutMain .abq2 span{
@@ -190,7 +192,7 @@ a{
 
 
  .home-bg .navbar .nav-op #req-demo:hover{
-     transform: scaleX(1.1);
+     transform: scaleX(1);
      transition-duration: 0.5s;
  }
 
@@ -221,6 +223,60 @@ a{
 .home-bg .waves img{
     opacity: 0.3;
     transform:translateX(300px);
+}
+
+.language{
+    position:relative;
+    width:min-content;
+    align-self: center;
+}
+.toggle-checkbox {
+    display: none;
+  }
+
+.toggle-label {
+    cursor: pointer;
+    padding:0 1px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--lightGray);
+    display: inline-block;
+  }
+
+.target-div {
+    display: none;
+  }
+.toggle-checkbox:checked ~ .target-div {
+    display: block;
+    position:absolute;
+    top:120%;
+    left: -140%;
+   
+  }
+  .home-bg #google_translate_element{
+    box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
+     background-color: var(--cbackground);
+     border:1px solid var(--border);
+     border-radius: 25px;
+     padding:0.5rem;
+     width:min-content;
+     align-self: center;
+ }
+ .effect1{
+	animation: effect1 1s ease-out forwards;
+}
+@keyframes effect1 {
+  0% {
+    transform: scale(0);
+    opacity: 0; 
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
 }
  section{
     background-color: var(--nwkBg);
@@ -386,6 +442,9 @@ a{
     transform:scale(1.08);
     transition-duration: 0.5s;
     transition-timing-function: ease-in-out;
+}
+.CMS .cmsContainer .content #iris_switch{
+    color:#2da63a;
 }
 .benifits{
     background-color:  hsla(180, 45%, 4%, 0.968);
@@ -596,13 +655,22 @@ a{
         justify-content: space-between;
         
     }
-
-    .home-bg .aboutMain h1,
+    .home-bg .aboutMain .abq1 img{
+        width:40%;
+    }
+    .home-bg .aboutMain .abq2 h1,
     .home-bg .aboutMain h2{
         font-size: 1.5rem;
+        padding:1rem;
     }
+    .home-bg .aboutMain .abq2 h1
     .home-bg .aboutMain .abq2 .nowrap{
         white-space: wrap;
+    }
+    .home-bg .navbar #req-demo{
+        width: 100%;
+        color:black;
+
     }
     .waves{
         display: none;
@@ -621,7 +689,7 @@ a{
     .clients .clientsContainer{
         flex-direction: column;
         align-items: flex-start;
-        padding: 2rem;
+        padding: 1.5rem;
     }
     .contact {
         flex-direction:column-reverse;
@@ -632,11 +700,24 @@ a{
     .contact  .branch{
         width:100%;
         overflow: hidden;
+        gap:10px;
+    }
+    .contact .branch .locations h2{
+        font-size: 1.2rem;
+    }
+    .contact .branch .contact-mobile h4{
+        font-size: 13px;
+    }
+    .contact .branch li,.contact .branch p{
+        font-size: 12px;
     }
     .contact .contactFrame .contactform{
         padding:1rem;
         place-self: center;
     } 
+    .footer-frame{
+        padding:60px 40px 30px;
+    }
     .footer-frame .innerFooterFrame-1,
     .footer-frame .innerFooterFrame-1 .about-footer,
     .footer-frame .innerFooterFrame-1 .iris{
@@ -653,7 +734,7 @@ a{
     }
     .home-bg .navbar{
        display: flex;
-       padding:1rem;
+       padding:0.5rem;
        flex-direction:column;
        align-items: flex-start;
        gap:1rem;
@@ -661,6 +742,7 @@ a{
    }
    .home-bg .navbar .nav-op{
        display:none;
+       width:100%;
        transition:all 2s ease-in;
 
    } 
@@ -670,7 +752,7 @@ a{
        justify-content:center;
        align-items:center;
        position:absolute;
-       top:1.5rem;
+       top:0.8rem;
        right:1rem;
        width:30px;
        height:21px;
@@ -722,8 +804,15 @@ a{
    .navbar.active #navoptions{
        display: flex;
        flex-direction: column;
-       gap:10px;
+       gap:2rem;
+       padding:1.5rem;
    }
+   .navbar.active #navoptions a{
+    font-size: 1.2rem;
+    text-align: center;
+
+
+}
    .navbar.active .mainOp,
    .navbar.active .productMenu{
        place-self: flex-start ;
@@ -749,12 +838,6 @@ a{
    
    
 
-}
-@media (min-width:810px){
-   .home-bg .navbar .hamburger{
-       display:none;
-      
-   }  
 }
 @media (max-width:1199px){
     section,

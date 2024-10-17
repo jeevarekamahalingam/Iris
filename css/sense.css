@@ -17,6 +17,7 @@
     box-sizing: border-box;
     line-height:1.8em;
     font-weight:400;
+    scroll-behavior: smooth;
 
 
 }
@@ -52,6 +53,7 @@ a{
     display: flex;
     align-items:center;
     justify-content:space-between;
+    backdrop-filter: blur(3px);
     box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
 }
 
@@ -62,10 +64,10 @@ a{
     justify-content: flex-start;
  }
 
- .home-bg .navbar .logo a{
+.home-bg .navbar .logo a{
     display: flex;
     place-items: center;
-}
+} 
 .home-bg .navbar img{
     height:2rem;
     margin-left:0.5rem; 
@@ -78,7 +80,10 @@ a{
     justify-content: space-between;
     color:white;
     font-size: 14px;
-    font-weight: bold;
+    font-weight: 500;
+}
+.home-bg .navbar .nav-op a{
+    font-weight: 500;
 }
 .home-bg .navbar .nav-op .mainOp:hover,
 .home-bg .navbar .nav-op .productMenu:hover #prod{
@@ -116,6 +121,7 @@ a{
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul li{
     padding:8.5px 0;
     border-radius: 2px;
+    font-weight: 500;
 } 
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul li:hover{
     background-color: rgba(66,66,66,255);
@@ -147,14 +153,18 @@ a{
     align-items: center;
     justify-content: center;
     text-align: center;
-    gap:24px;
+    gap:10px;
+    height:min-content;
+    backdrop-filter: blur(3px);
+   
 }
 
 .home-bg .aboutMain .abq1,
-.home-bg .aboutMain .abq2,
+.home-bg .aboutMain #adq2,
 .home-bg .aboutMain .abbutton{
     width:100%;
     height: min-content;
+    line-height: none;
 }
 .home-bg .aboutMain .abq1 img{
     width:382px;
@@ -170,8 +180,9 @@ a{
     font-family: "IBM Plex Mono", monospace;
     letter-spacing: 1.5px;
     font-weight:500;
-    font-size: 2.3rem;
-    line-height: 1.5em;
+    font-size: 2rem;
+    line-height: none;
+  
 }
 .home-bg .aboutMain .abq2 span{
     white-space: nowrap;
@@ -190,7 +201,7 @@ a{
 
 
  .home-bg .navbar .nav-op #req-demo:hover{
-     transform: scaleX(1.1);
+     transform: scaleX(1);
      transition-duration: 0.5s;
  }
 
@@ -223,6 +234,59 @@ a{
     opacity: 0.8;
     transform:translateX(300px);
 }
+.language{
+    position:relative;
+    width:min-content;
+    align-self: center;
+}
+.toggle-checkbox {
+    display: none;
+  }
+
+.toggle-label {
+    cursor: pointer;
+    padding:0 1px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--lightGray);
+    display: inline-block;
+  }
+
+.target-div {
+    display: none;
+  }
+.toggle-checkbox:checked ~ .target-div {
+    display: block;
+    position:absolute;
+    top:120%;
+    left: -140%;
+   
+  }
+.home-bg #google_translate_element{
+   box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
+    background-color: var(--cbackground);
+    border:1px solid var(--border);
+    border-radius: 25px;
+    padding:0.5rem;
+    width:min-content;
+    align-self: center;
+}
+.effect1{
+	animation: effect1 1s ease-out forwards;
+}
+@keyframes effect1 {
+  0% {
+    transform: scale(0);
+    opacity: 0; 
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
  section{
     background-color: rgb(25, 24, 21);
     display: flex;
@@ -235,7 +299,6 @@ a{
     height:min-content;
 
 }
-
 
 .intro h4{
     font-size:20px;
@@ -253,6 +316,20 @@ a{
 .content p{
     font-size:18px;
     font-weight: 400;
+}
+
+.wavefly{
+    position:absolute;
+    top: 750px;
+    left:0;
+    width:700px;
+    height:550px;
+    overflow: hidden;
+    
+}
+.wavefly img{
+    transform: translateX(-200px) rotatez(-45deg);
+    opacity: 0.1;
 }
 .benefits{
     height:min-content;
@@ -293,6 +370,9 @@ a{
     width:58px;
     border-radius: 50%;
     position:absolute;
+    display:flex;
+    align-items: center;
+    justify-content: center;
     top:0;
     left:50%;
     transform: translate(-50%,-50%);
@@ -458,18 +538,28 @@ a{
     .home-bg .navbar .nav-op{
         display:none;
     }
-    .home-bg .aboutMain h1,
+    .home-bg .aboutMain .abq1 img{
+        width:40%;
+    }
+    .home-bg .aboutMain .abq2 h1,
     .home-bg .aboutMain h2{
         font-size: 1.5rem;
+        padding:1rem;
     }
+    .home-bg .aboutMain
     .home-bg .aboutMain .abq2 .nowrap{
         white-space: wrap;
     }
-    .waves{
+    .waves,.wavefly{
         display: none;
     }
     section{
         height:min-content;
+    }
+    .home-bg .navbar #req-demo{
+        width: 100%;
+        color:black;
+
     }
     .contact {
         flex-direction:column-reverse;
@@ -480,11 +570,24 @@ a{
     .contact  .branch{
         width:100%;
         overflow: hidden;
+        gap:13px;
+    }
+    .contact .branch .locations h2{
+        font-size: 1.2rem;
+    }
+    .contact .branch .contact-mobile h4{
+        font-size: 13px;
+    }
+    .contact .branch li,.contact .branch p{
+        font-size: 12px;
     }
     .contact .contactFrame .contactform{
         padding:1rem;
         place-self: center;
     } 
+    .footer-frame{
+        padding:60px 40px 30px;
+    }
     .footer-frame .innerFooterFrame-1,
     .footer-frame .innerFooterFrame-1 .about-footer,
     .footer-frame .innerFooterFrame-1 .iris{
@@ -501,7 +604,7 @@ a{
     }
     .home-bg .navbar{
        display: flex;
-       padding:1rem;
+       padding:0.5rem;
        flex-direction:column;
        align-items: flex-start;
        gap:1rem;
@@ -518,7 +621,7 @@ a{
        justify-content:center;
        align-items:center;
        position:absolute;
-       top:1.5rem;
+       top:0.8rem;
        right:1rem;
        width:30px;
        height:21px;
@@ -570,8 +673,16 @@ a{
    .navbar.active #navoptions{
        display: flex;
        flex-direction: column;
-       gap:10px;
-   }
+       gap:2rem;
+       width:100%;
+       padding: 1.5rem;
+  }
+  .navbar.active #navoptions a{
+       font-size: 1.2rem;
+       text-align: center;
+   
+
+  }
    .navbar.active .mainOp,
    .navbar.active .productMenu{
        place-self: flex-start ;
@@ -597,12 +708,6 @@ a{
    
    
 
-}
-@media (min-width:810px){
-   .home-bg .navbar .hamburger{
-       display:none;
-      
-   }  
 }
 @media (max-width:1199px){
     section,

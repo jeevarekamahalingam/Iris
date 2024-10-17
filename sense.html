@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </span>
-                    <a class="mainOp" href="about.html">About</a>
+                    <a class="mainOp" href="about.html">About us</a>
                     <a class="mainOp" id="req-demo" href="#contactform">Request demo</a>
                 </div> 
 
@@ -46,13 +46,19 @@
                 <div class="abq1">
                     <img src="assets/iris_sense.png" alt="">
                 </div>
-                <div class="abq2">
+                <div class="abq2 effect1" id="adq2">
                     <h1>An energy business leader's only data tool for all their decision needs</h1>
                 </div>
-                <div class="abbutton">
+                <div class="abbutton effect1">
                     <a id="req-demo2" href="#contactform">Request demo</a>
                 </div>
+                <div class="language effect1">
+                    <input type="checkbox" id="toggle" class="toggle-checkbox">
+                    <label for="toggle" class="toggle-label"><img src="assets/language.svg" alt=""></label>
+                    <div class="target-div"><div id="google_translate_element"></div></div>
+                </div>
             </div>
+            
             <div class="waves">
                 <img src="assets/orange-wave.svg" alt="">
             </div>
@@ -72,23 +78,26 @@
             <p>Be it any CMS, ours or others, with Sense, making sense out of your data takes lesser time, efforts and technical skills than you think!</p>
         </div>
     </section>
+    <div class="wavefly">
+        <img src="assets/orange_wavefly.svg" alt="">
+    </div> 
     <section class="benefits">
         <span class="clip">Benefits</span>
         <div class="benefitGrid">
             <div class="benefitsContainer">
                 <span class="clip">Wasting time compiling reports? Effortless Insights Made Easy</span>
                 <div class="content"><p>Seamlessly explore data layers for quick insights and efficient workflows with our intuitive dashboard interface.</p></div>
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/stat.svg" width="50px"></div>
             </div>
             <div class="benefitsContainer">
                 <span class="clip">Lost in orphan data? Making sense made easy now!</span>
                 <div class="content"><p>Turn overlooked data into actionable insights effortlessly, simplifying decision-making without coding or reporting skills!</p></div>
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/db.svg" width="50px"></div>
             </div>
             <div id="thirdDiv"class="benefitsContainer">
                 <span class="clip">Struggling with your data overload? Not anymore!</span>
                 <div class="content"><p>Informed decision-making on Network and customer expansion through trend analysis and accessible visualizations for quick insights.</p></div>
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/monitor.svg" ></div>
             </div>
         </div>
     </section>
@@ -166,6 +175,8 @@
      </footer>
      <!--footer end-->  
      <script src="js/script.js"></script>
+     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 
 </body>
 </html>

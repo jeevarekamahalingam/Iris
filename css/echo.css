@@ -17,6 +17,7 @@
     box-sizing: border-box;
     line-height:1.8em;
     font-weight:400;
+    scroll-behavior: smooth;
 
 
 }
@@ -52,6 +53,7 @@ a{
     border:1px solid var(--border);
     display: flex;
     align-items:center;
+    backdrop-filter: blur(3px);
     justify-content:space-between;
     box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
 }
@@ -78,7 +80,9 @@ a{
     justify-content: space-between;
     color:white;
     font-size: 14px;
-    font-weight: bold;
+}
+.home-bg .navbar .nav-op a{
+    font-weight: 500;
 }
 .home-bg .navbar .nav-op .mainOp:hover,
 .home-bg .navbar .nav-op .productMenu:hover #prod{
@@ -116,6 +120,8 @@ a{
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul li{
     padding:8.5px 0;
     border-radius: 2px;
+    font-weight: 500;
+
 } 
 .home-bg .navbar .nav-op .productMenu .optionsProducts ul li:hover{
     background-color: rgba(66,66,66,255);
@@ -149,6 +155,8 @@ a{
     justify-content: center;
     text-align: center;
     gap:24px;
+    height: min-content;
+  
 }
 
 .home-bg .aboutMain .abq1,
@@ -195,7 +203,7 @@ a{
 
 
  .home-bg .navbar .nav-op #req-demo:hover{
-     transform: scaleX(1.1);
+     transform: scaleX(1);
      transition-duration: 0.5s;
  }
 
@@ -229,6 +237,59 @@ a{
     opacity: 0.3;
     transform:translateX(300px);
 }
+.language{
+    position:relative;
+    width:min-content;
+    align-self: center;
+}
+.effect1{
+	animation: effect1 1s ease-out forwards;
+}
+@keyframes effect1 {
+  0% {
+    transform: scale(0);
+    opacity: 0; 
+  }
+  50% {
+    opacity: 1; 
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+.toggle-checkbox {
+    display: none;
+  }
+
+.toggle-label {
+    cursor: pointer;
+    padding:0 1px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background-color: var(--lightGray);
+    display: inline-block;
+  }
+
+.target-div {
+    display: none;
+  }
+.toggle-checkbox:checked ~ .target-div {
+    display: block;
+    position:absolute;
+    top:120%;
+    left: -140%;
+   
+  }
+.home-bg #google_translate_element{
+   box-shadow: rgba(8, 248, 254, 0.1) 0px 15px 33px 0px, rgba(8, 248, 254, 0.09) 0px 60px 60px 0px, rgba(8, 248, 254, 0.05) 0px 135px 81px 0px, rgba(8, 248, 254, 0.01) 0px 239px 96px 0px, rgba(8, 248, 254, 0) 0px 374px 105px 0px;
+    background-color: var(--cbackground);
+    border:1px solid var(--border);
+    border-radius: 25px;
+    padding:0.5rem;
+    width:min-content;
+    align-self: center;
+}
  section{
     background-color: rgb(25, 24, 21);
     display: flex;
@@ -261,6 +322,21 @@ a{
     font-weight: 400;
 }
 
+
+.wavefly{
+    position:absolute;
+    top: 750px;
+    left:0;
+    width:700px;
+    height:550px;
+    overflow: hidden;
+    
+}
+.wavefly img{
+    transform: translateX(-200px) rotatez(-45deg);
+    
+    opacity: 0.3;
+}
 .featureList .feature_grid{
     display:grid;
     grid-template-columns: repeat(2,minmax(200px,1fr));
@@ -294,6 +370,9 @@ a{
     border-radius: 50%;
     position:absolute;
     top:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     left:50%;
     transform: translate(-50%,-50%);
     background-image:  linear-gradient(135deg, #533eef 11%, rgb(83, 171, 248) 51.35135135135135%, rgb(118, 69, 216) 100%);
@@ -491,17 +570,33 @@ a{
         justify-content: space-between;
         
     }
-    .home-bg .content .quotecontainer h1{
-        font-size: 4vw;
+    .home-bg .navbar .nav-op{
+        display:none;
     }
-    .home-bg .content .quotecontainer .nowrap{
+    .home-bg .aboutMain .abq1 img{
+        width:40%;
+    }
+    .home-bg .aboutMain .abq2 h1{
+        font-size: 1.5rem;
+        padding:1rem;
+    }
+    .home-bg .aboutMain h2{
+        padding: 1rem;
+    }
+    .home-bg .aboutMain
+    .home-bg .aboutMain .abq2 .nowrap{
         white-space: wrap;
     }
-    .waves{
+    .waves,.wavefly{
         display: none;
     }
     section{
         height:min-content;
+    }
+    .home-bg .navbar #req-demo{
+        width: 100%;
+        color:black;
+
     }
     .featureList .feature_grid{
         grid-template-columns: 1fr;
@@ -509,11 +604,22 @@ a{
     .contact{
         flex-direction:column-reverse;
         padding:40px 24px;
+        gap:13px;
     }
     .contact .contactform,
     .contact .branch{
         width:100%;
     }
+    .contact .branch .locations h2{
+        font-size: 1.2rem;
+    }
+    .contact .branch .contact-mobile h4{
+        font-size: 13px;
+    }
+    .contact .branch li,.contact .branch p{
+        font-size: 12px;
+    }
+
     .footer-frame{
         padding:60px 40px 30px;
     }
@@ -533,7 +639,7 @@ a{
     }
     .home-bg .navbar{
        display: flex;
-       padding:1rem;
+       padding:0.5rem;
        flex-direction:column;
        align-items: flex-start;
        gap:1rem;
@@ -550,7 +656,7 @@ a{
        justify-content:center;
        align-items:center;
        position:absolute;
-       top:1.5rem;
+       top:0.8rem;
        right:1rem;
        width:30px;
        height:21px;
@@ -602,14 +708,21 @@ a{
    .navbar.active #navoptions{
        display: flex;
        flex-direction: column;
-       gap:10px;
+       gap:2rem;
+       width:100%;
+        padding: 1.5rem;
+   }
+   .navbar.active #navoptions a{
+        font-size: 1.2rem;
+        text-align: center;
+    
+
    }
    .navbar.active .mainOp,
    .navbar.active .productMenu{
        place-self: flex-start ;
        flex-direction: column;     
    }
-  
    .nav-op.active  .nav-op .productMenu{
        place-self:flex-start !important;
        flex-direction: column !important;
@@ -629,12 +742,6 @@ a{
    
    
 
-}
-@media (min-width:810px){
-   .home-bg .navbar .hamburger{
-       display:none;
-      
-   }  
 }
 
 @media screen and (max-width:601px){

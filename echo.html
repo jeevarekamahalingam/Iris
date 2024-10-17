@@ -37,7 +37,7 @@
                             </div>
                         </div>
                     </span>
-                    <a class="mainOp" href="about.html">About</a>
+                    <a class="mainOp" href="about.html">About us</a>
                     <a class="mainOp" id="req-demo" href="#contactform">Request demo</a>
                 </div>               
              </div>
@@ -45,14 +45,19 @@
                 <div class="abq1">
                     <img src="assets/iris_echo.png" alt="">
                 </div>
-                <div class="abq2">
+                <div class="abq2 effect1">
                     <h1>Effortlessly test your CMS with our EV charger simulator</h1>
                 </div>
-                <div class="abq3">
+                <div class="abq3 effect1">
                     <h4>Smart charging, fault simulations and more…</h4>
                 </div>
-                <div class="abbutton">
+                <div class="abbutton effect1">
                     <a id="req-demo2" href="#contactform">Request demo</a>
+                </div>
+                <div class="language effect1">
+                    <input type="checkbox" id="toggle" class="toggle-checkbox">
+                    <label for="toggle" class="toggle-label"><img src="assets/language.svg" alt=""></label>
+                    <div class="target-div"><div id="google_translate_element"></div></div>
                 </div>
             </div>
             <div class="waves">
@@ -73,24 +78,30 @@
             <p>Now your development and testing teams can focus on their core functions than travelling and spending for field tests!</p>
         </div>
     </section>
+    <div class="wavefly">
+        <img src="assets/wavefly.svg" alt="">
+    </div>
     <section class="featureList">
         <span class="clip">Feature List</span>
         <div class="feature_grid">
             <div class="featureContainer">
                 <div class="circle">
+                    <img src="assets/iconsvg/light.svg" width="40px">
                 </div>
                 <div class="content">Streamline testing with automated scenarios designed specifically for OCPP sessions within our CMS.</div>
             </div>
             <div class="featureContainer">
-                <div class="circle"></div>
+                <div class="circle">
+                    <img src="assets/iconsvg/world.svg" width="40px">
+                </div>
                 <div class="content">Easily connect any OCPP-compatible charging software to Echo by entering your web-socket URL.</div>
             </div>
             <div class="featureContainer">
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/charger.svg" width="40px"></div>
                 <div class="content">Echo replicates a real-time charger, reducing manual efforts by efficiently sending standard messages.</div>
             </div>
             <div class="featureContainer">
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/sun.svg" width="40px"></div>
                 <div class="content">Empower users to manually send OCPP messages, facilitating the testing of custom scenarios Share your test case scenarios with us and we will add it to Echo in the next release</div>
             </div>
         </div>
@@ -101,17 +112,17 @@
             <div class="benefitsContainer">
                 <span class="clip">Surprised during field tests? Not anymore!</span>
                 <div class="content"><p>Test Iris Echo as part of your in-office tests before you take your CMS to field tests for hygiene and basic tests. Now, you can use field tests efforts and costs to address complex issues and scenarios only. </p></div>
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/surprised.svg" width="40px" alt=""></div>
             </div>
             <div class="benefitsContainer">
                 <span class="clip">No charger feasibility? No worries, Echo it!</span>
                 <div class="content"><p>Iris Echo ensures you do not struggle to reproduce multiple scenarios on a physical chargers. Scenario and live testing made simple without a charger for you!  </p></div>
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/nocharger.svg" width="40px" alt=""></div>
             </div>
             <div class="benefitsContainer" id="thirdDiv">
                 <span class="clip">Doubting your CMS? Test it now !</span>
                 <div class="content"><p>With our array of pre-built automated scenarios at your disposal, you can test CMS interactions with ease. Iris Echo helps you to validate your next CMS adoption decision without wasting time and efforts on ground!</p></div>
-                <div class="circle"></div>
+                <div class="circle"><img src="assets/iconsvg/monitor.svg" width="40px" alt=""></div>
             </div>
         </div>
     </section>
@@ -189,5 +200,7 @@
      </footer>
      <!--footer end--> 
      <script src="js/script.js"></script>  
+     <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
 </body>
 </html>
